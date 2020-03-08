@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="Suite" parallel="tests" >
+
+    <test name="com.SecondTest"  parallel="methods" thread-count="3">
+        <parameter name="browser" value="Firefox"/>
+        <classes>
+            <class name="SecondTest">
+               </class>
+        </classes>
+    </test> <!-- Second Test -->
+
+    <!--<test name="com.ThirdTest"  parallel="methods" thread-count="5">
+        <parameter name="browser" value="ie"/>
+        <classes>
+            <class name="SecondTest">
+            </class>
+        </classes>
+    </test> --><!-- Second Test -->
+
+</suite> <!-- Suite -->
