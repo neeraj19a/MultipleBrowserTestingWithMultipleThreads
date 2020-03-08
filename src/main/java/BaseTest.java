@@ -20,14 +20,9 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class BaseTest extends MultiThreadingExample {
 
-    private String browsertype;
-    private Actions actions = null;
-    private JavascriptExecutor js;
-
-    private static int timeout = 10;
-
-
-    //WebDriverWait wait = new WebDriverWait(driver, 45);
+    Thread t1 = new MultiThreadingExample();
+    Thread t2 = new MultiThreadingExample();
+    Thread t3 = new MultiThreadingExample();
 
     @BeforeMethod
     public void setup() {
@@ -36,15 +31,13 @@ public class BaseTest extends MultiThreadingExample {
         MultiThreadingExample.setBrowsertype("Chrome");
         multiThreadingExample.run();
 
-        Thread t1 = new MultiThreadingExample();
 
         MultiThreadingExample.setBrowsertype("Firefox");
         multiThreadingExample.run();
-        Thread t2 = new MultiThreadingExample();
 
         MultiThreadingExample.setBrowsertype("IE");
         multiThreadingExample.run();
-        Thread t3 = new MultiThreadingExample();
+
         System.out.println("Starting MyThreads");
         t1.start();
         t2.start();
@@ -54,7 +47,16 @@ public class BaseTest extends MultiThreadingExample {
 
     @AfterMethod
     public void teardown() {
-       driver.quit();
+        System.out.println("In afterMethod Waiting to kill drivers");
+        driver.quit();
+        driver.quit();
+        driver.quit();
+        driver.quit();
+        driver.quit();
+        driver.quit();
+        driver.quit();
+        driver.quit();
+
     }
 
 
@@ -110,11 +112,11 @@ public class BaseTest extends MultiThreadingExample {
     }
 
 
-    public void BrowserActions(RemoteWebDriver driver) {
+  /*  public void BrowserActions(RemoteWebDriver driver) {
         this.driver = driver;
         this.actions = new Actions(driver);
         this.js = (JavascriptExecutor) driver;
-    }
+    }*/
 //TODO awaitility
     /*public void waitTillElementDisplayed(WebElement element) {
         getawait().until(element::isDisplayed);

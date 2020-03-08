@@ -26,13 +26,12 @@ public class MultiThreadingExample extends Thread {
     protected static WebDriver driver;
     private static String browsertype;
 
-    private String Url;
-
     public String getBrowsertype() {
         return browsertype;
     }
 
     public static void setBrowsertype(String browsertype) {
+
         MultiThreadingExample.browsertype = browsertype;
     }
 
@@ -53,9 +52,10 @@ public class MultiThreadingExample extends Thread {
             Thread.sleep(1000);
             //testGoogleSearch();
 
-            //SecondTest secondTest = new SecondTest();
-            //secondTest.GOOGLE4();
-
+            SecondTest secondTest = new SecondTest();
+            secondTest.GOOGLE4();
+            secondTest.YANDEX();
+            secondTest.Facebook();
         } catch (InterruptedException e) {
             e.printStackTrace();
 
@@ -118,14 +118,15 @@ public class MultiThreadingExample extends Thread {
         System.out.println("################Actual:" + actualtitle + "Expected:" + expectedTitle + "#################");
     }*/
 
+    /*
     // tear down function to close browser
     public void tearDown() {
 
-      /*  driver.close();
-        driver.quit();*/
+        driver.close();
+        driver.quit();
 
     }
-
+*/
        /*// main method to create the thread and run multiple threads
     public static void main(String[] args) {
         Thread t1 = new MultiThreadingExample("Thread Chrome", "Chrome");

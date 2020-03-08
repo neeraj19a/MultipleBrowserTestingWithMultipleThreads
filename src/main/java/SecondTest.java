@@ -17,10 +17,18 @@ public class SecondTest extends BaseTest {
         System.out.println("Google4 Test Ended! " + "Thread Id: " + Thread.currentThread().getId());
     */}
 
-   // @Test
+    @Test
     public static void YANDEX() {
         System.out.println("Yandex Test Started! " + "Thread Id: " + Thread.currentThread().getId());
         driver.navigate().to("http://www.yandex.com");
+      /*  System.out.println("Yandex Test's Page title is: " + driver.getTitle() + " " + "Thread Id: " + Thread.currentThread().getId());
+        Assert.assertEquals(driver.getTitle(), "Yandex");
+        System.out.println("Yandex Test Ended! " + "Thread Id: " + Thread.currentThread().getId());
+    */}
+    @Test
+    public static void Facebook() {
+        System.out.println("Yandex Test Started! " + "Thread Id: " + Thread.currentThread().getId());
+        driver.navigate().to("https://www.facebook.com");
       /*  System.out.println("Yandex Test's Page title is: " + driver.getTitle() + " " + "Thread Id: " + Thread.currentThread().getId());
         Assert.assertEquals(driver.getTitle(), "Yandex");
         System.out.println("Yandex Test Ended! " + "Thread Id: " + Thread.currentThread().getId());
