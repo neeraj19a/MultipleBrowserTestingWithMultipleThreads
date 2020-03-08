@@ -1,6 +1,8 @@
 
 import java.io.File;
 
+import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -36,7 +38,7 @@ public class MultiThreadingExample extends Thread {
     }
 
 
-    @Override
+   /* @Override
     public void run() {
 
         System.out.println("Thread- Started" + Thread.currentThread().getName());
@@ -66,8 +68,56 @@ public class MultiThreadingExample extends Thread {
             // tearDown();
         }
         System.out.println("Thread- END " + Thread.currentThread().getName());
+    }*/
+
+    @Override
+    public void run() {
+
+        Method[] methods = SecondTest.class.getDeclaredMethods();// Using Reflection to get all Test Functions
+        final SecondTest m = new SecondTest();
+        //ArrayList<Thread> threadList = new ArrayList<Thread>();
+        ArrayList<String> browsers=new ArrayList<String>();
+        browsers.add("Chrome");
+        browsers.add("IE");
+
+        for (int i = 0; i < browsers.size(); i++) {
+            setBrowsertype(browsers.get(i));
+            System.out.println("Triggering Browser Setup" + getBrowsertype());
+
+            try {
+                setUp(getBrowsertype());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            Runnable run = null;
+            for (int j = 0; j < methods.length; j++) {
+                final String name = methods[j].getName(); // Getting all methods name i.e. okTest, OkTest1
+                if (!name.equalsIgnoreCase("myMain1") && !name.equalsIgnoreCase("run")) { // we dont want to run Main Function and 'run'
+// We want to run only okTest and okTest1 funtions like that
+
+                    run = new Runnable() {
+                        public void run() {
+
+                            try {
+                                Method method = m.getClass().getMethod(name);
+                                method.invoke(m); // Invoking the method using Reflection
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    };
+                    Thread thread = new Thread(run);// invoking Thread to call run method Overrided above
+
+                    thread.start();// Starting thread to execute above methods
+                }
+
+            }
+        }
     }
 
+    public void myMain1() {
+        this.run();
+    }
 
     // set up the method to initialize driver object
     public void setUp(String browsertype) throws Exception {

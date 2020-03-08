@@ -25,22 +25,25 @@ public class BaseTest extends MultiThreadingExample {
     Thread t3 = new MultiThreadingExample();
 
     @BeforeMethod
-    public void setup() {
+    public void setup() throws Exception {
 
         MultiThreadingExample multiThreadingExample=new MultiThreadingExample();
         MultiThreadingExample.setBrowsertype("Chrome");
-        multiThreadingExample.run();
+        multiThreadingExample.setUp(getBrowsertype());
 
 
         MultiThreadingExample.setBrowsertype("Firefox");
-        multiThreadingExample.run();
+        multiThreadingExample.setUp(getBrowsertype());
 
         MultiThreadingExample.setBrowsertype("IE");
-        multiThreadingExample.run();
+        multiThreadingExample.setUp(getBrowsertype());
 
         System.out.println("Starting MyThreads");
+        MultiThreadingExample.setBrowsertype("Chrome");
         t1.start();
+        MultiThreadingExample.setBrowsertype("Firefox");
         t2.start();
+        MultiThreadingExample.setBrowsertype("IE");
         t3.start();
         System.out.println("Thread has been started");
     }

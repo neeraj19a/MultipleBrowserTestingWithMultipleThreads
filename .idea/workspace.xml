@@ -50,7 +50,7 @@
       <recent name="C:\Users\T460\Downloads\CrossBrowserTestingWithSelenium\src" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/T460/Downloads/CrossBrowserTestingWithSelenium/src/TestNG.xml">
+  <component name="RunManager" selected="Application.TriggerTestCases">
     <configuration name="MultiThreadingExample (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MultiThreadingExample" />
       <module name="CrossBrowserTestingUsingMultiThreads" />
@@ -71,6 +71,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TriggerTestCases" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TriggerTestCases" />
+      <module name="CrossBrowserTestingUsingMultiThreads" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="C:/Users/T460/Downloads/CrossBrowserTestingWithSelenium/src/TestNG.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="CrossBrowserTestingUsingMultiThreads" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/TestNG.xml" />
@@ -83,6 +90,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TriggerTestCases" />
         <item itemvalue="TestNG.C:/Users/T460/Downloads/CrossBrowserTestingWithSelenium/src/TestNG.xml" />
         <item itemvalue="Application.MultiThreadingExample (1)" />
         <item itemvalue="Application.MultiThreadingExample" />
@@ -127,22 +135,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="90" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1583649239389" />
-    <state width="1323" height="212" key="GridCell.Tab.0.bottom" timestamp="1583670156566">
+    <state width="1323" height="137" key="GridCell.Tab.0.bottom" timestamp="1583673415792">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="212" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1583670156566" />
-    <state width="1323" height="212" key="GridCell.Tab.0.center" timestamp="1583670156566">
+    <state width="1323" height="137" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1583673415792" />
+    <state width="1323" height="137" key="GridCell.Tab.0.center" timestamp="1583673415792">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="212" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1583670156566" />
-    <state width="1323" height="212" key="GridCell.Tab.0.left" timestamp="1583670156565">
+    <state width="1323" height="137" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1583673415792" />
+    <state width="1323" height="137" key="GridCell.Tab.0.left" timestamp="1583673415792">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="212" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1583670156565" />
-    <state width="1323" height="212" key="GridCell.Tab.0.right" timestamp="1583670156566">
+    <state width="1323" height="137" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1583673415792" />
+    <state width="1323" height="137" key="GridCell.Tab.0.right" timestamp="1583673415792">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="212" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1583670156566" />
+    <state width="1323" height="137" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1583673415792" />
     <state width="1323" height="227" key="GridCell.Tab.1.bottom" timestamp="1583669587853">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -171,20 +179,13 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="390" y="125" width="586" height="488" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1583662685342" />
+    <state x="339" y="165" key="run.anything.popup" timestamp="1583671266885">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1583671266885" />
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1583666464628">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1583666464628" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/MultiThreadingExample.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

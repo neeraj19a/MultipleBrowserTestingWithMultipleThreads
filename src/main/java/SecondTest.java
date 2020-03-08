@@ -3,6 +3,8 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.lang.reflect.Method;
+
 public class SecondTest extends BaseTest {
 
 
@@ -33,4 +35,5 @@ public class SecondTest extends BaseTest {
         Assert.assertEquals(driver.getTitle(), "Yandex");
         System.out.println("Yandex Test Ended! " + "Thread Id: " + Thread.currentThread().getId());
     */}
+
 }
