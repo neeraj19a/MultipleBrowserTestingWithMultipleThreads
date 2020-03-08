@@ -27,7 +27,7 @@ public class BaseTest extends MultiThreadingExample {
     @BeforeMethod
     public void setup() throws Exception {
 
-        MultiThreadingExample multiThreadingExample=new MultiThreadingExample();
+        MultiThreadingExample multiThreadingExample = new MultiThreadingExample();
         MultiThreadingExample.setBrowsertype("Chrome");
         multiThreadingExample.setUp(getBrowsertype());
 
@@ -136,8 +136,6 @@ public class BaseTest extends MultiThreadingExample {
 	public Boolean isElementinFocus(WebElement element) {
 		return getawait().until(() -> element.equals(driver.switchTo().activeElement()), t -> t);
 	}*/
-
-
 
 
 }
