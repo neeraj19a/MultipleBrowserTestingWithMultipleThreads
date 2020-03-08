@@ -76,9 +76,11 @@ public class MultiThreadingExample extends Thread {
         Method[] methods = SecondTest.class.getDeclaredMethods();// Using Reflection to get all Test Functions
         final SecondTest m = new SecondTest();
         //ArrayList<Thread> threadList = new ArrayList<Thread>();
-        ArrayList<String> browsers=new ArrayList<String>();
+        ArrayList<String> browsers = new ArrayList<String>();
         browsers.add("Chrome");
         browsers.add("IE");
+        browsers.add("Firefox");
+
 
         for (int i = 0; i < browsers.size(); i++) {
             setBrowsertype(browsers.get(i));
@@ -106,9 +108,14 @@ public class MultiThreadingExample extends Thread {
                             }
                         }
                     };
-                    Thread thread = new Thread(run);// invoking Thread to call run method Overrided above
+                    Thread thread1 = new Thread(run);// invoking Thread to call run method Overrided above
+                    Thread thread2 = new Thread(run);// invoking Thread to call run method Overrided above
+                    Thread thread3 = new Thread(run);// invoking Thread to call run method Overrided above
 
-                    thread.start();// Starting thread to execute above methods
+                    thread1.start();// Starting thread to execute above methods
+                    thread2.start();// Starting thread to execute above methods
+                    thread3.start();// Starting thread to execute above methods
+
                 }
 
             }

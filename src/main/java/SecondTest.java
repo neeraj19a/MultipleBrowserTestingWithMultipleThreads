@@ -29,7 +29,7 @@ public class SecondTest extends BaseTest {
     */}
     @Test
     public static void Facebook() {
-        System.out.println("Yandex Test Started! " + "Thread Id: " + Thread.currentThread().getId());
+        System.out.println("Facebook Test Started! " + "Thread Id: " + Thread.currentThread().getId());
         driver.navigate().to("https://www.facebook.com");
       /*  System.out.println("Yandex Test's Page title is: " + driver.getTitle() + " " + "Thread Id: " + Thread.currentThread().getId());
         Assert.assertEquals(driver.getTitle(), "Yandex");
